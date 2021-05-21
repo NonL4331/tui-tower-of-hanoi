@@ -214,7 +214,7 @@ fn get_delay(args: &Vec<String>, index: usize) -> u32 {
             Ok(val) => val,
             Err(_) => {
                 println!("Please specify a valid value for delay!");
-                println!("Do -H or --help for more informatin.");
+                println!("Do -H or --help for more information.");
                 process::exit(0);
             }
         },
@@ -233,7 +233,7 @@ fn get_height(args: &Vec<String>, index: usize) -> u32 {
             Err(_) => {
                 println!("{} is not a valid value for height!", string);
                 println!("Please specify a valid value for height!");
-                println!("Do -H or --help for more informatin.");
+                println!("Do -H or --help for more information.");
                 process::exit(0);
             }
         },
@@ -244,7 +244,7 @@ fn get_log(args: &Vec<String>, index: usize) -> LogLevel {
     match args.get(index) {
         None => {
             println!("Please specify a value for log level!");
-            println!("Do -H or --help for more informatin.");
+            println!("Do -H or --help for more information.");
             process::exit(0);
         }
         Some(string) => match &string.to_lowercase()[..] {
@@ -254,7 +254,7 @@ fn get_log(args: &Vec<String>, index: usize) -> LogLevel {
             _ => {
                 println!("{} is not a valid value for log level!", string);
                 println!("Please specify a valid value for log level!");
-                println!("Do -H or --help for more informatin.");
+                println!("Do -H or --help for more information.");
                 process::exit(0);
             }
         },
